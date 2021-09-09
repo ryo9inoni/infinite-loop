@@ -314,7 +314,7 @@
         );
         
         // 吹き出しのとんがり
-        const triangleEl = edit === null ? new createjs.Bitmap('/assets/images/iko/triangle' + this.el_balloon.triangle.m[this.mode] + '.png') : edit.getChildByName('triangle');
+        const triangleEl = edit === null ? new createjs.Bitmap('/assets/images/triangle' + this.el_balloon.triangle.m[this.mode] + '.png') : edit.getChildByName('triangle');
         triangleEl.name = 'triangle';
         triangleEl.x = this.el_balloon.triangle.x[this.mode];
         triangleEl.y = this.el_balloon.triangle.y[this.mode];
@@ -393,9 +393,9 @@
               case 2: this.data.thumbnail = '00'+this.data.thumbnail; break;
               case 3: this.data.thumbnail = '0'+this.data.thumbnail; break;
             }
-            detail_thumbnail.src = '/assets/images/iko/detail/'+this.data.thumbnail+'.jpg';
+            detail_thumbnail.src = '/assets/images/detail/'+this.data.thumbnail+'.jpg';
             detail_thumbnail.onerror = () => {
-              detail_thumbnail.src = '/assets/images/iko/detail/no-image.png';
+              detail_thumbnail.src = '/assets/images/detail/no-image.png';
             } 
             detail.classList.add('-active');
             body.style.overflow = 'hidden';
